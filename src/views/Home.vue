@@ -53,11 +53,11 @@ export default {
       // 左侧菜单数据
       menulist: [],
       iconsObj: {
-        '125': 'iconfont icon-user',
-        '103': 'iconfont icon-tijikongjian',
+        '125': 'iconfont icon-users',
+        '103': 'iconfont icon-zhongchuangkongjian-',
         '101': 'iconfont icon-shangpin',
-        '102': 'iconfont icon-danju',
-        '145': 'iconfont icon-baobiao'
+        '102': 'iconfont icon-danju-tianchong',
+        '145': 'iconfont icon-icon'
       },
       // 是否折叠
       isCollapse: false,
