@@ -108,7 +108,6 @@ export default {
 
       this.rolelist = res.data
 
-      console.log(this.rolelist)
     },
     // 根据Id删除对应的权限
     async removeRightById(role, rightId) {
@@ -150,7 +149,6 @@ export default {
 
       // 把获取到的权限数据保存到 data 中
       this.rightslist = res.data
-      console.log(this.rightslist)
 
       // 递归获取三级节点的Id
       this.getLeafKeys(role, this.defKeys)

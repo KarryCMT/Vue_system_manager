@@ -52,7 +52,6 @@ export default {
   methods: {
     // 点击重置按钮，重置登录表单
     resetLoginForm() {
-      // console.log(this);
       this.$refs.loginFormRef.resetFields()
     },
     login() {

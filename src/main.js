@@ -6,6 +6,7 @@ import axios from 'axios'
 import './assets/fonts/iconfont.css'
 // 导入全局样式表
 import './assets/css/global.css'
+import TreeTable from 'vue-table-with-tree-grid'
 import {
   Button,
   Form,
@@ -34,10 +35,12 @@ import {
   Tag,
   Tree,
   Select,
-  Option
+  Option,
+  Cascader 
 } from 'element-ui'
 
 Vue.use(Button)
+Vue.use(Cascader)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
@@ -66,6 +69,7 @@ Vue.use(Option)
 
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
+Vue.component('tree-table',TreeTable)
 axios.defaults.baseURL = 'http://39.97.124.157:8888/api/private/v1/'
 axios.interceptors.request.use(config => {
   // console.log(config)
