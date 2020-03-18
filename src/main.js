@@ -13,6 +13,8 @@ import './assets/css/global.css'
 import TreeTable from 'vue-table-with-tree-grid'
 import {
   Button,
+  Timeline, 
+  TimelineItem, 
   Form,
   FormItem,
   Input,
@@ -50,8 +52,9 @@ import {
   Checkbox,
   Upload   
 } from 'element-ui'
-
 Vue.use(Upload)
+Vue.use(TimelineItem)
+Vue.use(Timeline)
 Vue.use(CheckboxGroup)
 Vue.use(Checkbox)
 Vue.use(Steps)
