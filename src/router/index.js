@@ -11,7 +11,7 @@ const router = new Router({
     },
     {
       path: '/login',
-      component: () => import('../views/Login.vue') 
+      component: () => import('../views/Login.vue')
     },
     {
       path: '/home',
@@ -45,6 +45,10 @@ const router = new Router({
         {
           path: '/goods',
           component: () => import('../views/goods/List.vue'),
+        },
+        {
+          path: '/goods/add',
+          component: () => import('../views/goods/Add.vue'),
         }
       ]
     }

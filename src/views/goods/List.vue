@@ -12,13 +12,13 @@
           <el-form>
             <el-form-item>
               <el-input placeholder="请输入内容" clearable @clear="getGoodsList">
-                <el-button slot="append" icon="el-icon-search"></el-button>
+                <el-button slot="append" icon="el-icon-search" @click="getGoodsList"></el-button>
               </el-input>
             </el-form-item>
           </el-form>
         </el-col>
         <el-col :span="4">
-          <el-button type="primary">添加商品</el-button>
+          <el-button type="primary" @click="addGoods">添加商品</el-button>
         </el-col>
       </el-row>
 
@@ -30,7 +30,7 @@
         <el-table-column align="center" prop="add_time" width="280px" label="创建时间">
           <template slot-scope="scope">{{scope.row.add_time | dateFormat}}</template>
         </el-table-column>
-        <el-table-column align="center" prop label="操作" width="150px">
+        <el-table-column align="center" label="操作" width="150px">
           <template slot-scope="scope">
             <el-button
               type="primary"
@@ -69,7 +69,7 @@ export default {
       queryInfo: {
         query: "",
         pagenum: 1,
-        pagesize: 5
+        pagesize: 10
       },
       total: 0
     };
@@ -85,6 +85,9 @@ export default {
     handleCurrentChange(newPage) {
       this.queryInfo.pagenum = newPage;
       this.getGoodsList();
+    },
+    addGoods(){
+      this.$router.push('/goods/add')
     },
     async getGoodsList() {
       const { data: res } = await this.$http.get("goods", {
