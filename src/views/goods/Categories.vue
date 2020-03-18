@@ -234,12 +234,10 @@ export default {
         return this.$message.error("获取父级分类数据失败！");
       }
 
-      console.log(res.data);
       this.parentCateList = res.data;
     },
     // 选择项发生变化触发这个函数
     parentCateChanged() {
-      console.log(this.selectedKeys);
       // 如果 selectedKeys 数组中的 length 大于0，证明选中的父级分类
       // 反之，就说明没有选中任何父级分类
       if (this.selectedKeys.length > 0) {

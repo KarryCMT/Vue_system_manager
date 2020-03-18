@@ -96,7 +96,6 @@ export default {
       if (res.meta.status !== 200) {
         return this.$message.error("获取商品列表失败");
       }
-      console.log(res);
       this.goodsList = res.data.goods;
       this.total = res.data.total;
     },
@@ -124,7 +123,6 @@ export default {
       this.getGoodsList();
     },
     async editGoodsList(id){
-
     }
   }
 };

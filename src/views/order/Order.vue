@@ -130,7 +130,6 @@ export default {
       }
       this.orderList = res.data.goods;
       this.total = res.data.total;
-      console.log(res);
     },
     handleSizeChange(NewSizeId) {
       this.queryInfo.pagesize = NewSizeId;
@@ -152,7 +151,6 @@ export default {
         return this.$message.error("获取物流信息失败");
       }
       this.progressInfo = res.data;
-      console.log(this.progressInfo);
 
       this.progressVisible = true;
     }
